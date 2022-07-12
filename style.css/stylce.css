@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: rgb(37, 11, 49);
+    background-color: rgb(17, 46, 83);
 }
 
 section{
@@ -18,6 +18,9 @@ section{
     padding: 20px;
     transition: 0.5s;
 }
+section.active{
+    background-color: rgb(129, 11, 11);
+}
 
 section .container{
     position: relative;
@@ -25,6 +28,7 @@ section .container{
     height: 500px;
     background: #fff;
     box-shadow: 0 15px 50px rgb(0,0,0,0.1);
+    overflow: hidden;
 
 }
 
@@ -95,13 +99,23 @@ section .container .user .formBx input{
 
 section .container .user .formBx input[type="submit"]{
          max-width: 100px;
-         background: #677eff;
+         background: rgb(17, 46, 83);
          color:#fff;
          font-size: 14px;
          font-weight: 500;
          letter-spacing: 1px;
          transition: 0.5s;
 }
+section .container .user.signupBx .formBx input[type="submit"]{
+    background: rgb(129, 11, 11);
+}
+
+
+/*
+
+    SIGN UP
+
+*/
 
 section .container .user .formBx .signup{
     position:relative;
@@ -118,3 +132,61 @@ section .container .user .formBx .signup a{
     text-decoration: none;
     color: #577eff;
 }
+
+section .container .signupBx{   
+    pointer-events: none;
+}
+
+section .container.active .signupBx{
+    pointer-events: initial;
+}
+
+section .container .signupBx .formBx{
+    top: 100%;
+}
+
+section .container.active .signupBx .formBx{
+    top: 0;
+}
+
+section .container .signupBx .imgBx{
+    top: -100%;
+    transition: 0.5s;
+}
+
+section .container.active .signupBx .imgBx{
+    top: 0;
+}
+
+section .container .signinBx .formBx{
+    top: 0;
+}
+section .container.active .signinBx .formBx{
+    top: 100%;
+}
+
+section .container .signinBx .imgBx{
+    top: 0;
+    transition: 0.5s;
+}
+section .container.active .signinBx .imgBx{
+    top: -100%;
+}
+
+@media (max-width: 991px)
+{
+    section .container{
+        max-width: 400px;
+   }
+    section .container .imgBx{
+        display: none;
+   }
+    section .container .user .formBx{
+        width: 100%;
+   }
+   section .container.active .signinBx .formBx{
+    top: -100%;
+}
+}
+
+
